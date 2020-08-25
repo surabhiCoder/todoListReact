@@ -36,8 +36,8 @@ export const todoReducer = (state, { type, payload }) => {
     case 'COMPLETE_TODO': {
       const completeTodo = (arr) =>
         arr.map((x) => {
-          if (x.id === payload) {
-            return { ...x, isDone: !x.isDone };
+          if (x.id === payload.id) {
+            return payload;
           }
           return x;
         });

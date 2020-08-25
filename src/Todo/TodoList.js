@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodoList = ({ todoList, dispatch, deleteTodo }) => {
+const TodoList = ({ todoList, onDelete , onComplete}) => {
     return (
         <div>
             <For each="todo" of={todoList}>
@@ -9,7 +9,7 @@ const TodoList = ({ todoList, dispatch, deleteTodo }) => {
                         type="checkbox"
                         name="isDone"
                         checked={todo.isDone}
-                        onChange={() => dispatch({ type: 'COMPLETE_TODO', payload: todo.id })}
+                        onChange={() => onComplete(todo)}
                     />
                     <p
                         key={todo.id}
@@ -19,7 +19,7 @@ const TodoList = ({ todoList, dispatch, deleteTodo }) => {
                     >
                         {todo.text}
                     </p>
-                    <button type="button" onClick={deleteTodo(todo.id)}>
+                    <button type="button" onClick={() => onDelete(todo.id)}>
                         Delete</button>
                     {/* <button type="button" onClick={() => dispatch({ type: 'REMOVE_TODO', payload: todo.id })}>
                         Delete</button> */}

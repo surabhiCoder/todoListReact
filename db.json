@@ -1,13 +1,8 @@
 {
   "todo": [
     {
-      "text": "get milk",
-      "isDone": false,
-      "id": 1
-    },
-    {
       "text": "get food",
-      "isDone": false,
+      "isDone": true,
       "id": 2
     },
     {
