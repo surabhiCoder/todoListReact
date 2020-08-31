@@ -1,5 +1,5 @@
 body {
-    background-color: #11111d;
+    background-color: #36365d;
     font-family: 'Gayathri', sans-serif;
 }
 
@@ -18,12 +18,15 @@ body {
     border: none;
     border-radius: 5px;
     display: inline-block;
-    margin-left: 10px;
     color: #ffffff;
     font-size: 14px;
     padding: 10px 10px 5px 10px;
     font-family: 'Gayathri', sans-serif;
     font-weight: 700;
+}
+
+.tabs + .tabs{
+    margin-left: 10px;
 }
 
 .defaultBtn,
@@ -40,7 +43,7 @@ body {
 }
 
 .todoTitle {
-    color: #4b467c;
+    color: #cfd1f3;
     font-weight: 700;
 }
 

@@ -29,15 +29,18 @@ const App = () => {
   const addTodo = async () => {
     dispatch({ type: 'LOADING', payload: true });
     try {
-      const res = await fetch('http://localhost:3000/todo', {
-        method: 'POST',
-        body: JSON.stringify({ text: todo.todoText, isDone: false }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const newTodo = await res.json();
-      dispatch({ type: 'ADD_TODO', payload: newTodo });
+      if(todo.todoText !== ''){
+        const res = await fetch('http://localhost:3000/todo', {
+          method: 'POST',
+          body: JSON.stringify({ text: todo.todoText, isDone: false }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        const newTodo = await res.json();
+        dispatch({ type: 'ADD_TODO', payload: newTodo });
+      }
+      
     } catch (error) {
       dispatch({ type: 'ERROR', payload: error });
     } finally {

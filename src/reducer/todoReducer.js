@@ -33,14 +33,17 @@ export const todoReducer = (state, { type, payload }) => {
     }
 
     case 'ADD_TODO': {
-      const newTodo = [...state.data, payload];
-      return {
-        ...state,
-        data: newTodo,
-        todoText: '',
-        status: 'all',
-        filteredData: newTodo,
-      };
+      console.log(payload);
+      if(payload.text !== ''){
+        const newTodo = [...state.data, payload];
+        return {
+          ...state,
+          data: newTodo,
+          todoText: '',
+          status: 'all',
+          filteredData: newTodo,
+        };
+      } 
     }
 
     case 'COMPLETE_TODO': {
