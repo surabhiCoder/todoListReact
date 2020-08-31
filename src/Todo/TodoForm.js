@@ -14,7 +14,7 @@ const TodoForm = ({ value, onSubmit, dispatch }) => {
       <button type="submit" className="addBtn">
         Add Todo
       </button> 
-      <FontAwesomeIcon icon="clock" />
+      <FontAwesomeIcon icon="clock" /> 
       <FontAwesomeIcon icon="list" />
       Your <FontAwesomeIcon icon="check-circle" /> is hot and ready!
     </form>
