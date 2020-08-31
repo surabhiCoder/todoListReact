@@ -36,7 +36,7 @@ const App = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-        });
+        }); 
         const newTodo = await res.json();
         dispatch({ type: 'ADD_TODO', payload: newTodo });
       }

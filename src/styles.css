@@ -26,7 +26,7 @@ body {
 }
 
 .tabs + .tabs{
-    margin-left: 10px;
+    margin-left: 10px; 
 }
 
 .defaultBtn,

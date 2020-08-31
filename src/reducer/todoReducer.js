@@ -23,7 +23,7 @@ export const todoReducer = (state, { type, payload }) => {
       return { ...state, todoText: payload };
 
     case 'LOADING':
-      return { ...state, loading: payload };
+      return { ...state, loading: payload }; 
 
     case 'ERROR':
       return { ...state, error: payload };
