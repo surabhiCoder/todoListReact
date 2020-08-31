@@ -67,6 +67,7 @@ export const todoReducer = (state, { type, payload }) => {
       return {
         ...state,
         filteredData: state.data.filter((x) => {
+          console.log(x);
           switch (payload) {
             case 'pending':
               return x.isDone === false;
