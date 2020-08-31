@@ -8,6 +8,16 @@ export const initialState = {
 };
 
 export const todoReducer = (state, { type, payload }) => {
+
+  if(type == 'CHANGE_STATUS'){
+    // console.log(document.querySelectorAll('.tabs'));
+    const tabsArr = document.querySelectorAll('.tabs');
+    tabsArr.forEach(element => {
+      element.classList.remove('activeTab');
+    });
+    document.getElementById(payload).classList.add('activeTab');
+  }
+
   switch (type) {
     case 'CHANGE_TEXT':
       return { ...state, todoText: payload };
@@ -70,6 +80,7 @@ export const todoReducer = (state, { type, payload }) => {
           console.log(x);
           switch (payload) {
             case 'pending':
+              
               return x.isDone === false;
             case 'completed':
               return x.isDone === true;

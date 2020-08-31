@@ -1,14 +1,19 @@
 {
   "todo": [
     {
-      "text": "get food",
+      "text": "buy breads",
       "isDone": true,
-      "id": 2
+      "id": 3
     },
     {
-      "text": "buy breads",
+      "text": "eat sleep repeat",
+      "isDone": true,
+      "id": 4
+    },
+    {
+      "text": "shop for cloths",
       "isDone": false,
-      "id": 3
+      "id": 5
     }
   ]
 }

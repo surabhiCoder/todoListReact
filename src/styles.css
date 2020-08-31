@@ -1,61 +1,169 @@
-body{
+body {
     background-color: #11111d;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Gayathri', sans-serif;
 }
 
-.btnStyle{
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: auto;
+}
+
+.btnStyle {
     border: none;
     border-radius: 5px;
     display: inline-block;
     margin-left: 10px;
     color: #ffffff;
     font-size: 14px;
-    padding: 10px 20px;
-
+    padding: 10px 10px 5px 10px;
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 700;
 }
 
-.defaultBtn, .activeTab{
+.defaultBtn,
+.tabs.activeTab {
     background-color: #4851ee;
-
 }
 
-.todoTitle{
+.secondaryBtn {
+    background-color: #4c4c82;
+}
+
+.floatRight {
+    float: right;
+}
+
+.todoTitle {
     color: #4b467c;
     font-weight: 700;
 }
 
-.addTodoInput{
-    background-color: #191933; 
+.addTodoInput {
+    background-color: #191933;
 }
 
-.searchBox{
+.formWrap{
+    clear: both;
+}
+
+.formWrap:after, .formWrap:before{
+    content: "";
+  clear: both;
+  display: table;
+}
+
+.searchBox {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: 80%;
+    float: left;
+    padding-right: 10px;
 }
 
-.searchBox input{
+.addBtn{
+    float: right;
+    width: 20%;
+    margin-left: 0;
+}
+
+.searchBox input {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     padding-left: 30px;
-    color: #4b467c;
+    color: #fff;
     font-weight: 700;
+    width: 100%;
 }
 
-.searchBox .searchIcon{
+.searchBox .searchIcon {
     position: absolute;
     top: 10px;
     left: 10px;
     color: #4b467c;
 }
 
-
-
-.filterWrap{
-
+.filterWrap {
+    margin-bottom: 20px;
 }
 
-.tabs{
+
+.pendingIcon{
+    color: #ffa535;
+}
+
+.compltIcon{
+    color: #2dff7b;
+}
+
+.tabs {
     background-color: #11111d;
     cursor: pointer;
+}
+
+.todoListWrap {
+    border-radius: 5px;
+    background-color: #191933;
+    color: #fff;
+    margin: 15px 0;
+    padding: 10px 10px 5px;
+}
+
+.sideBy {
+    display: inline-block;
+    padding: 10px;
+}
+
+.checkboxInp {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.checkboxLbl {
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.checkboxLbl:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #4851ee;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 6px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.checkboxInp:checked+.checkboxLbl:before {
+    background-color: #1d1e56;
+    border: 2px solid #1d1e56;
+}
+
+.checkboxInp:checked+.checkboxLbl:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 8px;
+    width: 5px;
+    height: 13px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }

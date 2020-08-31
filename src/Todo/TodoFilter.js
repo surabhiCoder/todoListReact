@@ -1,31 +1,32 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const TodoFilter = ({ dispatch }) => {
   return (
     <div className="filterWrap">
       <button
         type="button"
-        name="all"
-        className="btnStyle tabs"
+        id="all"
+        className="btnStyle tabs activeTab"
         onClick={() => dispatch({ type: 'CHANGE_STATUS', payload: 'all' })}
       >
-        ALL
+       <FontAwesomeIcon icon="list" className="allIcon" /> ALL
       </button>
       <button
         type="button"
-        name="pending"
+        id="pending"
         className="btnStyle tabs"
         onClick={() => dispatch({ type: 'CHANGE_STATUS', payload: 'pending' })}
       >
-        PENDING
+       <FontAwesomeIcon icon="clock" className="pendingIcon" /> PENDING
       </button>
       <button
         type="button"
-        name="completed"
+        id="completed"
         className="btnStyle tabs"
         onClick={() => dispatch({ type: 'CHANGE_STATUS', payload: 'completed' })}
       >
-        COMPLETED
+       <FontAwesomeIcon icon="check-circle" className="compltIcon" /> COMPLETED
       </button>
     </div>
   );

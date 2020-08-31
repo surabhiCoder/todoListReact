@@ -6,9 +6,9 @@ import { todoReducer, initialState } from './reducer/todoReducer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 // import { fab } from '@fortawesome/free-brands-svg-icons';
-import {  faClock, faCheckCircle, faList, faSearch } from '@fortawesome/free-solid-svg-icons';
+import {  faClock, faCheckCircle, faList, faTimes, faPlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faClock, faCheckCircle, faList, faSearch)
+library.add(faClock, faCheckCircle, faList, faTimes, faPlus, faPlusCircle)
 
 const App = () => {
   const [todo, dispatch] = useReducer(todoReducer, initialState);
@@ -100,14 +100,14 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className="wrapper">
       <h1 className="todoTitle">To Do App</h1>
       <TodoFilter dispatch={dispatch} />
       <TodoForm value={todo.todoText} onSubmit={onSubmit} dispatch={dispatch} />
       {/* <TodoList todoList={todo.filteredData} dispatch={dispatch} onDelete={deleteTodo(todo.id)} /> */}
       <TodoList todoList={todo.filteredData} onComplete={updateTodo} onDelete={deleteTodo} />
       
-    </>
+    </div>
   );
 };
 
